@@ -21,7 +21,7 @@ class ClockPvForecastCard extends LitElement {
     }
     
     // Prüfe ob mindestens eine Entity definiert ist
-    const hasEntity = ['entity_today', 'entity_tomorrow', 'entity_day3', 'entity_day4', 'entity_day5', 'entity_day6', 'entity_day7']
+    const hasEntity = ['entity_today', 'entity_tomorrow', 'entity_day3', 'entity_day4', 'entity_day5', 'entity_day6', 'entity_day7', 'entity_day8', 'entity_day9', 'entity_day10', 'entity_day11', 'entity_day12', 'entity_day13']
       .some(key => config[key]);
     
     if (!hasEntity) {
@@ -93,6 +93,12 @@ class ClockPvForecastCard extends LitElement {
         this.config.entity_day5,
         this.config.entity_day6,
         this.config.entity_day7,
+        this.config.entity_day8,
+        this.config.entity_day9,
+        this.config.entity_day10,
+        this.config.entity_day11,
+        this.config.entity_day12,
+        this.config.entity_day13,
         this.config.entity_remaining,
       ].filter(Boolean);
       
@@ -114,6 +120,12 @@ class ClockPvForecastCard extends LitElement {
       this.config.entity_day5 && { offset: 4, entity: this.config.entity_day5 },
       this.config.entity_day6 && { offset: 5, entity: this.config.entity_day6 },
       this.config.entity_day7 && { offset: 6, entity: this.config.entity_day7 },
+      this.config.entity_day8 && { offset: 7, entity: this.config.entity_day8 },
+      this.config.entity_day9 && { offset: 8, entity: this.config.entity_day9 },
+      this.config.entity_day10 && { offset: 9, entity: this.config.entity_day10 },
+      this.config.entity_day11 && { offset: 10, entity: this.config.entity_day11 },
+      this.config.entity_day12 && { offset: 11, entity: this.config.entity_day12 },
+      this.config.entity_day13 && { offset: 12, entity: this.config.entity_day13 },
     ].filter(Boolean);
 
     return html`
